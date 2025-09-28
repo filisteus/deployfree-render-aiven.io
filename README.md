@@ -1,4 +1,4 @@
-# 🐶 Spring PetClinic com Render + Supabase
+# 🐶 Spring PetClinic com Render + Aiven.io
 
 Este repositório contém o código-fonte do [Spring PetClinic](https://github.com/spring-projects/spring-petclinic), configurado para ser implantado gratuitamente na nuvem usando:
 
@@ -31,7 +31,7 @@ git clone https://github.com/filisteus/deployfree-render-aiven.io.git
 cd deployfree-render-aiven.io
 ```
 
-### 2. Configure o Supabase
+### 2. Configure o Aiven.io
 
 1. Crie uma conta em [Aiven.io](https://console.aiven.io/).
 2. Crie um novo projeto e copie as credenciais:
@@ -55,7 +55,7 @@ SPRING_JPA_HIBERNATE_DDL_AUTO=validate
 3. Selecione este repositório.
 4. No campo “Build Command”: 
 5. No campo “Start Command”: 
-6. Adicione variáveis de ambiente (usando as do Supabase):
+6. Adicione variáveis de ambiente (usando as do Aiven):
    - 
    - 
    - 
