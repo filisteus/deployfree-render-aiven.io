@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: petclinic-app
+    env: java
+    region: frankfurt
+    plan: free
+    buildCommand: "./mvnw clean package -DskipTests"
+    startCommand: "java -jar target/*.jar"
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        fromSecret: SUPABASE_URL
+      - key: SPRING_DATASOURCE_USERNAME
+        fromSecret: SUPABASE_USER
+      - key: SPRING_DATASOURCE_PASSWORD
+        fromSecret: SUPABASE_PASS
+      - key: SPRING_JPA_HIBERNATE_DDL_AUTO
+        value: validate

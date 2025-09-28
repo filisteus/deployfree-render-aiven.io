@@ -1,0 +1,28 @@
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Build
+target/
+*.jar
+*.war
+
+# Environment
+.env
+.env.local
+.env.*
+
+# Logs and temp files
+logs/
+tmp/
+*.log
+
+# Maven
+.mvn/
+repository/
+
+# OS
+.DS_Store
+Thumbs.db
