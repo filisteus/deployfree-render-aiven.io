@@ -40,9 +40,9 @@ cd deployfree-render-aiven.io
 3. Crie o arquivo  na raiz do projeto:
 
 ```.env
-SPRING_DATASOURCE_URL=jbdc:postgresql:/deployfree-pevaristo.j.aivencloud.com:13854/defaultdb
+SPRING_DATASOURCE_URL=jbdc:postgresql:/<your-aiven-host>:<port>/defaultdb
 SPRING_DATASOURCE_USERNAME=avnadmin
-SPRING_DATASOURCE_PASSWORD=REMOVIDO
+SPRING_DATASOURCE_PASSWORD=*******************
 SPRING_JPA_HIBERNATE_DDL_AUTO=validate
 ```
 

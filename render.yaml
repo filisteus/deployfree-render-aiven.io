@@ -1,17 +1,16 @@
 services:
   - type: web
-    name: petclinic-app
-    env: java
-    region: frankfurt
+    name: petclinic-aiven
+    env: docker
+    region: frankfurt  # ou sua região preferida
     plan: free
-    buildCommand: "./mvnw clean package -DskipTests"
-    startCommand: "java -jar target/*.jar"
+    dockerfilePath: ./Dockerfile
     envVars:
       - key: SPRING_DATASOURCE_URL
-        fromSecret: SUPABASE_URL
+        fromSecret: SPRING_DATASOURCE_URL
       - key: SPRING_DATASOURCE_USERNAME
-        fromSecret: SUPABASE_USER
+        fromSecret: SPRING_DATASOURCE_USERNAME
       - key: SPRING_DATASOURCE_PASSWORD
-        fromSecret: SUPABASE_PASS
+        fromSecret: SPRING_DATASOURCE_PASSWORD
       - key: SPRING_JPA_HIBERNATE_DDL_AUTO
         value: validate
