@@ -2,7 +2,7 @@ services:
   - type: web
     name: petclinic-aiven
     env: docker
-    region: frankfurt  # ou sua região preferida
+    region: frankfurt
     plan: free
     dockerfilePath: ./Dockerfile
     envVars:
@@ -14,3 +14,5 @@ services:
         fromSecret: SPRING_DATASOURCE_PASSWORD
       - key: SPRING_JPA_HIBERNATE_DDL_AUTO
         value: validate
+      - key: SPRING_PROFILES_ACTIVE
+        value: postgres
